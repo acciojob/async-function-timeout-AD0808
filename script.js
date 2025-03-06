@@ -1,3 +1,5 @@
+
+
 document.getElementById("btn").addEventListener("click", async function () {
   let textInput = document.getElementById("text").value;
   let delayInput = document.getElementById("delay").value;
@@ -10,9 +12,10 @@ document.getElementById("btn").addEventListener("click", async function () {
 
   let delay = parseInt(delayInput);
 
-  outputDiv.innerHTML = "Waiting...";
-  
+  outputDiv.innerHTML = ""; // Clear output before waiting
+
   await new Promise((resolve) => setTimeout(resolve, delay));
-  
+
   outputDiv.innerHTML = textInput;
 });
+
